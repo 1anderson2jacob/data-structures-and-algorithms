@@ -15,8 +15,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length+1; i++) {
     result.push(str.slice(i));
+    //result.push(str.slice(i));
   }
   return result;
 };
@@ -30,7 +31,11 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  let wordsarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    wordsarr.push(arr[i]);
+  }
+  return wordsarr;
 };
 
 
@@ -91,7 +96,14 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  recipe.ingredients.forEach((item) => {
+    let arr = item.split(' ');
+    arr.splice(0,2);
+    console.log(arr.join(' '));
+    arr = arr.join(' ');
+    result.push(arr);
+  })
   return result;
 }
 
@@ -125,7 +137,16 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  const arrLen = arr.length;
+  for (let i = 0; i < arrLen; i++) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i,1);
+      if (i < arr.length-1) {
+        i -=1;
+      }
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -144,7 +165,14 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if (numberOfCharacters > str.length) {
+    return '';
+  } else if (numberOfCharacters < 0) {
+    return str;
+  } else {
+    console.log(str.length);
+    return str.slice(0,-numberOfCharacters);
+  }
 };
 
 
