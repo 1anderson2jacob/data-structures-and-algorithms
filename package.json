@@ -1,0 +1,28 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "code-challenges": "code-challenges",
+    "arrays": "code-challenges/arrays"
+  },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1anderson2jacob/data-structures-and-algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1anderson2jacob/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/1anderson2jacob/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "eslint": "^5.10.0",
+    "jest": "^23.6.0"
+  }
+}
