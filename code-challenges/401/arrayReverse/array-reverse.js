@@ -1,6 +1,6 @@
 'use strict';
 
-//let arreh = [1,2,3,4,5,6];
+let arreh = [1,2,3,4,5,6];
 
 function reverseArray(arr) {
   let newArr = [];
@@ -10,5 +10,5 @@ function reverseArray(arr) {
   return newArr;
 }
 
-//reverseArray(arreh);
+reverseArray(arreh);
 
